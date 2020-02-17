@@ -1,0 +1,153 @@
+.product-modal {
+	background-image: linear-gradient(130deg, #0a0908 41%, #434343 60%);
+	transition: all 0.5s ease-in-out;
+	position: fixed;
+	bottom: -120vh;
+	left: 0;
+	right: 0;
+	// display: none;
+	// visibility: hidden;
+	max-height: 92vh;
+	width: 100%;
+	z-index: 9999;
+
+	&__close {
+		display: flex;
+		justify-content: center;
+		align-item: center;
+		cursor: pointer;
+		background-color: var(--red);
+		position: absolute;
+		top: 90px;
+		right: 60px;
+
+		.fa-times {
+			height: 24px;
+			width: 19px;
+			font-size: 25px !important;
+			color: var(--white) !important;
+		}
+	}
+
+	&__content {
+		// height: 90vh;
+		// position: relative;
+		background-color: transparent;
+		display: flex;
+		justify-content: space-between;
+		// grid-template-columns: 390px 820px;
+		padding-bottom: 10px;
+	}
+
+	&__img {
+		margin-top: -130px;
+		max-width: 390px;
+		height: auto;
+	}
+
+	&__body {
+		max-width: 820px;
+		text-align: center;
+		color: #fff;
+	}
+
+	&__header {
+		// margin-bottom: 10px;
+	}
+
+	&__name {
+		font-size: 35px;
+		margin-bottom: 0;
+		line-height: 1em;
+	}
+
+	&__info {
+		font-size: 25px;
+		color: var(--white);
+		margin: 1px 0;
+	}
+
+	&__price {
+		font-size: 30px;
+		color: var(--red);
+		margin-top: 0;
+	}
+
+	// Specs
+	&__specs {
+
+		.row-1, .row-2 {
+			display: grid;
+
+			h4 {
+				font-size: 25px;
+				margin: 0;
+				text-transform: uppercase;
+				font-weight: normal;
+			}
+
+			h3 {
+				color: var(--red);
+				font-size: 69px;
+				line-height: 69px;
+				margin: 15px 0;
+				font-weight: normal;
+			}
+
+			h5 {
+				font-size: 19px;
+				margin: 0;
+				font-weight: normal;
+				padding-bottom: 20px;
+			}
+		}
+
+		.row-1 {
+			grid-template-columns: repeat(3, 200px);
+		}
+
+		p {
+			margin: 10px 0 25px 0;
+			font-size: 15px;
+		}
+
+		.row-2 {
+			grid-template-columns: 1fr 1fr;
+
+			h3 {
+				font-size: 55px;
+				margin-top: 10px;
+			}
+
+			h5 {
+				font-size: 16px;
+				padding-bottom: 40px;
+			}
+		}
+	}
+
+	&__spec {
+		border-right: 1px solid var(--black);
+		font-weight: normal;
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	&__note {
+		grid-column: 1 / 4;
+	}
+}
+
+// Classes added in JS
+.hide-scroll {
+	overflow-y: hidden;
+}
+
+.product-modal.visible {
+	bottom: 0;
+	// max-height: 90vh;
+	// display: block;
+	// visibility: visible;
+}

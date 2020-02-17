@@ -15,6 +15,8 @@ import 'magnific-popup/src/css/main.scss';
 
 // Our modules / classes
 import Menu from './modules/Menu';
+// import Menu from './modules/Menu2';
+import ProductModal from './modules/ProductModal';
 import ScrollToTop from './modules/ScrollToTop';
 import ScrollReveal from './modules/ScrollReveal';
 // import MobileMenu from './modules/MobileMenu';
@@ -24,6 +26,7 @@ import MagnificPopup from './modules/MagnificPopup';
 
 // Instantiate a new object using our modules/classes
 var menu = new Menu();
+var productModal = new ProductModal();
 var scrollToTop = new ScrollToTop();
 var scrollReveal = new ScrollReveal();
 // var mobileMenu = new MobileMenu();

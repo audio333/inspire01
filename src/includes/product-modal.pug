@@ -1,0 +1,45 @@
+//- Mixin
+//- mixin product(name, price)
+mixin product({name, info, price, motor, maxSpeed, maxRange, battery, tireSize})
+	li
+		span: i(aria-hidden=true).fas.fa-chevron-circle-right
+		span: a(href="#") #{name} #{info}
+		.product-modal
+			span.product-modal__close
+				i.fas.fa-times
+			.product-modal__content.container
+				.product-modal__img
+					img.products-modal(src="images/scooter1-modal.png", alt="scooter")
+				.product-modal__body
+					.product-modal__header
+						h2.product-modal__name #{name}
+						h3.product-modal__info #{info}
+						h3.product-modal__price SRP #{price}
+					.product-modal__specs
+						.row-1
+							.product-modal__spec
+								h4 Motor
+								h3 #{motor}
+								h5 w
+							.product-modal__spec
+								h4 Max Speed
+								h3 #{maxSpeed}
+								h5 km/hr
+							.product-modal__spec
+								h4 Max Range
+								h3 #{maxRange}
+								h5 km
+						p.product-modal__note (MAX RANGE will be affected by weight, roads usage)
+						.row-2
+							.product-modal__spec
+								h4 Battery
+								h3 #{battery}
+								h5 Sinc Power
+							.product-modal__spec
+								h4 Tire Size
+								h3 #{tireSize}
+								h5 Solid Tire
+
+//- Usage
+//- +product('Go Board Titan 8 Single', '37,500')
+
