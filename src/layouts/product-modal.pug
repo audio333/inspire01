@@ -1,6 +1,6 @@
 //- Mixin
 //- mixin product(name, price)
-mixin product({name, info, price, motor, maxSpeed, maxRange, battery, tireSize})
+mixin product({picture, name, info, price, motor, motorUnit, maxSpeed, maxRange, battery, batteryType, tireSize, tireType})
 	li
 		span: i(aria-hidden=true).fas.fa-chevron-circle-right
 		span: a(href="#") #{name} #{info}
@@ -9,7 +9,7 @@ mixin product({name, info, price, motor, maxSpeed, maxRange, battery, tireSize})
 				i.fas.fa-times
 			.product-modal__content.container
 				.product-modal__img
-					img.products-modal(src="images/scooter1-modal.png", alt="scooter")
+					img.products-modal(src=picture, alt="scooter")
 				.product-modal__body
 					.product-modal__header
 						h2.product-modal__name #{name}
@@ -19,26 +19,26 @@ mixin product({name, info, price, motor, maxSpeed, maxRange, battery, tireSize})
 						.row-1
 							.product-modal__spec
 								h4 Motor
-								h3 #{motor}
-								h5 w
+								h3#motor #{motor}
+								h5 #{motorUnit}
 							.product-modal__spec
 								h4 Max Speed
-								h3 #{maxSpeed}
+								h3#maxSpeed #{maxSpeed}
 								h5 km/hr
 							.product-modal__spec
 								h4 Max Range
-								h3 #{maxRange}
+								h3#maxRange #{maxRange}
 								h5 km
 						p.product-modal__note (MAX RANGE will be affected by weight, roads usage)
 						.row-2
 							.product-modal__spec
 								h4 Battery
 								h3 #{battery}
-								h5 Sinc Power
+								h5 #{batteryType}
 							.product-modal__spec
 								h4 Tire Size
 								h3 #{tireSize}
-								h5 Solid Tire
+								h5 #{tireType}
 
 //- Usage
 //- +product('Go Board Titan 8 Single', '37,500')

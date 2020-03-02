@@ -7,7 +7,7 @@ class ScrollReveal {
 
 		// Intersection Observer
 		this.appearOptions = {
-			rootMargin: "0px 0px -100px 0px"
+			rootMargin: "0px 0px -50px 0px"
 		};
 
 		this.appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){

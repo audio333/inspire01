@@ -16,7 +16,7 @@ class Menu {
 		this.bgOverlay = document.querySelector('.bg-overlay');
 
 		// Intersection Observer
-		this.sectionOne = document.querySelector('.hero');
+		this.sectionOne = document.querySelector('.nav-intersection');
 
 		this. sectionOneOptions = {
 			rootMargin: "-630px 0px 0px 0px"

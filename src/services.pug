@@ -1,0 +1,43 @@
+extends layouts/app
+block content
+	include layouts/page-template
+	+pageTemplate('Services', '')
+		.services.fade-in
+			.container
+				ul.services__body
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Controller Change: Php 550
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Motor Hub Change: Php 550
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Inner Tube Change: Php 150
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Tire Vulcanize: Php 150
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Tire Change: Php 150
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Key Ignition Installation: Php 950
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Brake Adjustment: Php 100
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Hydraulic Brake Installation: Php 350
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Rotor Disk Change: Php 200
+					li
+						i.fas.fa-circle(aria-hidden="true")
+						| Brakepad Change: Php 100
+			.services__footer
+				.container
+					img(src="images/rider.png", alt="rider")
+					p *Prices are subject to change upon Mechanic's discretion.
+
+

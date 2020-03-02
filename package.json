@@ -18,9 +18,12 @@
     "sass": "^1.24.2"
   },
   "dependencies": {
+    "counterup2": "^1.0.4",
     "jquery": "^3.4.1",
+    "jquery-bridget": "^2.0.1",
     "lightbox2": "^2.11.1",
     "magnific-popup": "^1.1.0",
+    "masonry-layout": "^4.2.2",
     "modules": "^0.4.0",
     "slick-carousel": "^1.8.1",
     "slick-lightbox": "^0.2.10"

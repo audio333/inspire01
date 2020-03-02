@@ -1,0 +1,9 @@
+mixin pageTemplate(title, subtitle)
+	.page
+		.page__header.container.nav-intersection.fade-in
+			h4.page__subtitle #{subtitle}
+			.wrapper
+				h1.page__title #{title}
+				.line-separator-p.slide-x
+		.page__body
+			block

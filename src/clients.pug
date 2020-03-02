@@ -1,0 +1,25 @@
+extends layouts/app
+block content
+	include layouts/page-template
+	+pageTemplate('Testimonials', 'Clients')
+		.clients.container
+			.client
+				.client__img
+					img(src="images/testimonials/client1.jpg", alt="client")
+				h4.client__title Moki
+				p.client__text Moki with his new titan 8! Enjoy your new ride!
+			.client
+				.client__img
+					img(src="images/testimonials/client2.jpg", alt="client")
+				h4.client__title John Tibayan
+				p.client__text Another client is happy with his new Skoot single motor 1200W! Congratulations John Tibayan and enjoy your new ride!
+			.client
+				.client__img
+					img(src="images/testimonials/client1.jpg", alt="client")
+				h4.client__title Moki
+				p.client__text Moki with his new titan 8! Enjoy your new ride!
+			.client
+				.client__img
+					img(src="images/testimonials/client2.jpg", alt="client")
+				h4.client__title Moki
+				p.client__text Moki with his new titan 8! Enjoy your new ride!

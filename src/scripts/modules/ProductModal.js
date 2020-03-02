@@ -1,3 +1,5 @@
+import counterUp from 'counterup2';
+
 class ProductModal {
 	constructor() {
 		console.log('product modal init');
@@ -19,10 +21,31 @@ class ProductModal {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 
+				// MODAL
 				var currentModal = this.lastChild;
 				currentModal.classList.add('visible');
+
 				self.bgOverlay.style.display = "block";
 				self.bodyEl.classList.add('hide-scroll');
+
+				// Counter Up
+				var motor = link.querySelector('#motor');
+				counterUp(motor, {
+					duration: 1000,
+					delay: 16
+				});
+
+				var maxSpeed = link.querySelector('#maxSpeed');
+				counterUp(maxSpeed, {
+					duration: 1000,
+					delay: 16
+				});
+
+				var maxRange = link.querySelector('#maxRange');
+				counterUp(maxRange, {
+					duration: 1000,
+					delay: 16
+				});
 			});
 		});
 
@@ -31,7 +54,8 @@ class ProductModal {
 			close.addEventListener('click', function(e){
 				e.preventDefault();
 				e.stopPropagation();
-				// Modal
+
+				// MODAL
 				self.modals.forEach(modal => {
 					if(modal.classList.contains('visible')) {
 						modal.classList.remove('visible');
@@ -55,6 +79,7 @@ class ProductModal {
 			}
 		});
 		this.bgOverlay.style.display = "none";
+		this.bodyEl.classList.remove('hide-scroll');
 	}
 
 }

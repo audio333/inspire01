@@ -1,0 +1,35 @@
+extends layouts/app
+block content
+	include layouts/page-template
+	+pageTemplate('Promos', 'Check Our')
+		.promos.container.magnific
+			a.promo.fade-in.scale-up(href="images/promos/promo1.jpg")
+				img.promo__img(src="images/promos/promo1.jpg", alt="promos")
+				.promo__img-overlay
+			a.promo.fade-in.scale-up(href="images/promos/promo2.jpg")
+				img.promo__img(src="images/promos/promo2.jpg", alt="promos")
+				.promo__img-overlay
+			a.promo.fade-in.scale-up(href="images/promos/promo3.jpg")
+				img.promo__img(src="images/promos/promo3.jpg", alt="promos")
+				.promo__img-overlay
+			a.promo.fade-in.scale-up(href="images/promos/promo4.jpg")
+				img.promo__img(src="images/promos/promo4.jpg", alt="promos")
+				.promo__img-overlay
+			a.promo.fade-in.scale-up(href="images/promos/promo5.jpg")
+				img.promo__img(src="images/promos/promo5.jpg", alt="promos")
+				.promo__img-overlay
+			a.promo.fade-in.scale-up(href="images/promos/promo6.jpg")
+				img.promo__img(src="images/promos/promo6.jpg", alt="promos")
+				.promo__img-overlay
+		.payment
+			.container
+				.payment__body
+					h1.gigantic 0%
+					h4 Installment Deals
+					p Get 0% interest up to 12 months with your BDO or BPI credit card and 6 months for approved home credit application.
+					.payment__images
+						img.payment__img.fade-in(src="images/promos/payment1.png", alt="photo")
+						img.payment__img.fade-in(src="images/promos/payment2.png", alt="photo")
+						img.payment__img.fade-in(src="images/promos/payment3.png", alt="photo")
+				.payment__img-scooter
+					img(src="images/promos/scooters.png", alt="scooters")
