@@ -4,6 +4,7 @@ mixin product({picture, name, info, price, motor, motorUnit, maxSpeed, maxRange,
 	li
 		span: i(aria-hidden=true).fas.fa-chevron-circle-right
 		span: a(href="#") #{name} #{info}
+	.product-modal__wrapper
 		.product-modal
 			span.product-modal__close
 				i.fas.fa-times

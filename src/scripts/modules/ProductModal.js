@@ -22,26 +22,26 @@ class ProductModal {
 				e.preventDefault();
 
 				// MODAL
-				var currentModal = this.lastChild;
+				var currentModal = this.nextSibling.querySelector('.product-modal');
 				currentModal.classList.add('visible');
 
 				self.bgOverlay.style.display = "block";
 				self.bodyEl.classList.add('hide-scroll');
 
 				// Counter Up
-				var motor = link.querySelector('#motor');
+				var motor = link.nextSibling.querySelector('#motor');
 				counterUp(motor, {
 					duration: 1000,
 					delay: 16
 				});
 
-				var maxSpeed = link.querySelector('#maxSpeed');
+				var maxSpeed = link.nextSibling.querySelector('#maxSpeed');
 				counterUp(maxSpeed, {
 					duration: 1000,
 					delay: 16
 				});
 
-				var maxRange = link.querySelector('#maxRange');
+				var maxRange = link.nextSibling.querySelector('#maxRange');
 				counterUp(maxRange, {
 					duration: 1000,
 					delay: 16

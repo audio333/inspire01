@@ -1,0 +1,169 @@
+.about-us {
+	display: grid;
+	grid-template-columns: 1fr 460px;
+	grid-template-areas:
+		"header"
+		"pg1"
+		"img1"
+		"pg2"
+		"glink"
+		"line"
+		"text";
+	text-transform: none;
+	grid-gap: 16px;
+	margin-bottom: 70px;
+
+	@include mq(md) {
+		grid-template-areas:
+			"header img1"
+			"pg1 	  img1"
+			"pg2    pg2"
+			"glink  glink"
+			"line   line"
+			"text   text";
+	}
+
+	.page__header {
+		grid-area: header;
+		margin-bottom: -12px;
+		text-transform: uppercase;
+	}
+
+	.page__subtitle {
+		margin: 0 0 1.5em 0;
+		font-weight: normal;
+		font-size: 17px;
+		letter-spacing: 1px;
+
+		@include mq(md) {
+			margin-bottom: .9em;
+		}
+
+		@include mq(lg) {
+			margin-bottom:.7em;
+			font-size: 20px;
+		}
+	}
+
+	.page__title {
+		margin: 10px 20px 0 0;
+		font-size: 50px;
+		font-family: $font-sans2;
+		letter-spacing: .4px;
+
+		@include mq(lg) {
+			font-size: 70px;
+			margin-top: 15px;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	&__pg1 {
+		grid-area: pg1;
+	}
+
+	&__img1 {
+		grid-area: img1;
+		// max-width: 460px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__pg2 {
+		grid-area: pg2;
+	}
+
+	&__gallery-link {
+		grid-area: glink;
+		position: relative;
+		background-image: url("../images/about/image2.jpg");
+		background-position: 50% 70%;
+		background-size: auto 125%;
+		min-height: 320px;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		transition: 1s all ease-in;
+
+		&:hover {
+			background-position: 50% 10%;
+			transition: 1s all ease-out;
+		}
+
+		h3 {
+			font-size: 30px;
+			color: #fff;
+			margin: 0;
+			z-index: 2;
+		}
+	}
+
+	&__img2-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		transition: 500ms opacity ease-out;
+		background-color: #000;
+		opacity: 0.45;
+
+		&:hover {
+			opacity: 0;
+		}
+	}
+
+	.line-separator-p {
+		grid-area: line;
+	}
+
+	&__text {
+		grid-area: text;
+		display: grid;
+		grid-template-columns: 580px 1fr;
+		grid-template-areas:
+			"pg4"
+			"img3";
+		grid-gap: 20px;
+
+		@include mq(md) {
+			grid-template-areas: "img3 pg4";
+		}
+
+		h4 {
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: normal;
+			letter-spacing: 1px;
+			margin: 0;
+		}
+
+		h2 {
+			font-size: 50px;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__pg4 {
+		grid-area: pg4;
+		// max-width: 580px;
+
+		.button--xs {
+			border-radius: 0;
+			padding: 12px 25px;
+		}
+	}
+
+	&__img3 {
+		grid-area: img3;
+	}
+
+}
